@@ -131,13 +131,13 @@ The basic contour model didn’t work well right away, especially for the thin, 
 
 Image 1:
 
-<img style="width:500px" src="https://github.com/user-attachments/assets/73040f26-a221-480b-8c48-9171d3184513">
-<img style="width:500px" src="https://github.com/user-attachments/assets/6cd4f3d7-8a3b-42aa-9fe0-a4785faa7533">
+<img style="width:350px" src="https://github.com/user-attachments/assets/73040f26-a221-480b-8c48-9171d3184513">
+<img style="width:350px" src="https://github.com/user-attachments/assets/6cd4f3d7-8a3b-42aa-9fe0-a4785faa7533">
 
 Image 2:
 
-<img style="width:500px" src="https://github.com/user-attachments/assets/a160201f-806f-41c0-8079-e917a11b8667">
-<img style="width:500px" src="https://github.com/user-attachments/assets/cfbcf70e-d2d6-4cd8-b11a-01cd017005ff">
+<img style="width:350px" src="https://github.com/user-attachments/assets/a160201f-806f-41c0-8079-e917a11b8667">
+<img style="width:350px" src="https://github.com/user-attachments/assets/cfbcf70e-d2d6-4cd8-b11a-01cd017005ff">
 
 ### Challenges
 Even after all this, there were still limitations. The active contour model struggled with cracks because they’re so irregular in shape and often occur in noisy or uneven lighting conditions. It was clear that more advanced techniques or additional preprocessing would be needed for perfect results.
