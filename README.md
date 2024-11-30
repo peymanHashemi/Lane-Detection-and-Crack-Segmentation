@@ -110,7 +110,7 @@ Video 1:
 
 <img style="width:500px" src="https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0">
 
-[![Watch the video](https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0)](https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0)
+[![Watch the video](https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0)]
 
 Video 2:
 <img style="width:500px" src="https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0">
