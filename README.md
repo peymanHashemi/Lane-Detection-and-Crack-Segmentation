@@ -1,4 +1,4 @@
-# Lane Detection and Crack Segmentation
+![image](https://github.com/user-attachments/assets/05c9d628-72c7-435f-9f1b-edfca9a95118)# Lane Detection and Crack Segmentation
 This project focuses on implementing a basic lane departure warning system using computer vision techniques. The system aims to assist drivers by detecting road lanes and warning about potential deviations. Additionally, the project explores crack detection using active contour models. The project is divided into four main steps:
 
 ## Part 1: Understanding and Configuring Hough Line Transform Parameters
@@ -6,6 +6,8 @@ Introduce the parameters of cv2.HoughLinesP, such as threshold, minimum line len
 Explain the impact of each parameter on the output and how this method differs from the standard Hough Transform.
 
 ## Part 2: Lane Detection Implementation
+
+<img style="width:700px" src="https://github.com/user-attachments/assets/cc86117d-b90a-4806-855f-5afa2366e96a">
 
 ### Canny Edge Detection:
 Load an image from the AAIC dataset (img1.jpg).
@@ -56,14 +58,30 @@ I started by loading the input image and applied two different filters:
 * Bilateral Filter was more interesting because it smoothed the image while preserving edges, which is exactly what I needed.
 Once the image was smoothed, I applied the Canny edge detector. Getting the parameters right for Canny was tricky since I had to balance between detecting enough edges and avoiding too much noise.
 
+### Results:
+
+<img style="width:500px" src="https://github.com/user-attachments/assets/0ac97de1-ffa7-4456-95e5-f00f8587ccf9"> <br>
+<img style="width:500px" src="https://github.com/user-attachments/assets/a56fa540-b120-4486-affc-cb974440d4c1"> <br>
+<img style="width:500px" src="https://github.com/user-attachments/assets/1115ce50-d66d-4e57-8d57-fb90f308e463">
+
+
 ### (b) Creating a Region of Interest (ROI)
 Next, I focused on detecting lanes in a specific region. I knew that lanes typically appear in a triangular area from the driver’s perspective. So, I used the following approach:
 
 * I selected a point roughly in the middle of the image to represent a vanishing point.
 * I connected this point to the bottom corners of the image, forming a triangle.
 * Using cv2.fillPoly(), I created a mask to isolate this triangular area and applied it to the image.
+
+### Results:
+
+<img style="width:500px" src="https://github.com/user-attachments/assets/f8f4c4ea-0dc5-413b-a805-f635270d7b24">
+
 ### (c) Line Detection with Hough Transform
 With the ROI in place, I used the Hough Line Transform again but now on the masked image. The challenge here was fine-tuning the parameters to get clear, continuous lane lines. The initial results weren’t perfect, but after some tweaking, the output was solid.
+
+### Results:
+
+<img style="width:500px" src="https://github.com/user-attachments/assets/ad3d3291-ed5f-4553-9945-f3cfbad71a53">
 
 ### (d) Averaging and Extending the Lines
 One issue I faced was that the detected lines were often broken up. To fix this, I:
@@ -72,11 +90,27 @@ One issue I faced was that the detected lines were often broken up. To fix this,
 * Calculated a weighted average for each group to create a single, more stable line for each side.
 * Extended these averaged lines to cover the entire visible lane area by using their slopes to guide the extension.
 
+### Results:
+
+<img style="width:500px" src="https://github.com/user-attachments/assets/8775cafd-47fc-43a8-95cb-7abf42107855">
+<img style="width:500px" src="(https://github.com/user-attachments/assets/49946f25-2406-4739-9e5b-9b2f50afb23d">
+
 # Part 3
 
 For video processing, I used OpenCV’s cv2.VideoCapture() to read frames. Each frame was processed the same way as the image in Step 2. However, I added a layer of consistency between frames to keep the detected lines stable:
 
 * I gave more weight (70%) to the previous frame’s lines and 30% to the current frame’s lines. This simple weighted average helped smooth out any sudden changes and made the lines look more natural in the final video.
+
+### Results:
+
+Video 1:
+
+<img style="width:500px" src="https://github.com/user-attachments/assets/9e131630-ff85-41a7-9bf9-8f108d1dfe4e">
+<img style="width:500px" src="https://github.com/user-attachments/assets/ecf97603-fd4d-4817-a632-52fb371c8954">
+
+Video 2:
+<img style="width:500px" src="https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0">
+<img style="width:500px" src="https://github.com/user-attachments/assets/6978769d-afce-45ec-866c-b582d76bff97">
 
 # Part 4
 
@@ -93,6 +127,19 @@ The basic contour model didn’t work well right away, especially for the thin, 
 * Crack Highlighting: I used cv2.inRange() to isolate potential crack areas, combining these with the Canny edges.
 * Morphological Closing: This helped connect broken crack segments and fill gaps.
 * Active Contour: Finally, I applied the contour model with carefully tuned parameters.
+
+### Results:
+
+Image 1:
+
+<img style="width:500px" src="https://github.com/user-attachments/assets/73040f26-a221-480b-8c48-9171d3184513">
+<img style="width:500px" src="https://github.com/user-attachments/assets/6cd4f3d7-8a3b-42aa-9fe0-a4785faa7533">
+
+Image 2:
+
+<img style="width:500px" src="https://github.com/user-attachments/assets/a160201f-806f-41c0-8079-e917a11b8667">
+<img style="width:500px" src="https://github.com/user-attachments/assets/cfbcf70e-d2d6-4cd8-b11a-01cd017005ff">
+
 ### Challenges
 Even after all this, there were still limitations. The active contour model struggled with cracks because they’re so irregular in shape and often occur in noisy or uneven lighting conditions. It was clear that more advanced techniques or additional preprocessing would be needed for perfect results.
 
