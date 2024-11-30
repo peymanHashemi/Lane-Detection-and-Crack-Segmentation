@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/05c9d628-72c7-435f-9f1b-edfca9a95118)# Lane Detection and Crack Segmentation
+# Lane Detection and Crack Segmentation
 This project focuses on implementing a basic lane departure warning system using computer vision techniques. The system aims to assist drivers by detecting road lanes and warning about potential deviations. Additionally, the project explores crack detection using active contour models. The project is divided into four main steps:
 
 ## Part 1: Understanding and Configuring Hough Line Transform Parameters
