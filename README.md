@@ -93,7 +93,7 @@ One issue I faced was that the detected lines were often broken up. To fix this,
 ### Results:
 
 <img style="width:500px" src="https://github.com/user-attachments/assets/8775cafd-47fc-43a8-95cb-7abf42107855">
-<img style="width:500px" src="(https://github.com/user-attachments/assets/49946f25-2406-4739-9e5b-9b2f50afb23d">
+<img style="width:500px" src="https://github.com/user-attachments/assets/49946f25-2406-4739-9e5b-9b2f50afb23d">
 
 # Part 3
 
