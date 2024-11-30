@@ -108,14 +108,17 @@ Video 1:
 <img style="width:500px" src="https://github.com/user-attachments/assets/9e131630-ff85-41a7-9bf9-8f108d1dfe4e">
 <img style="width:500px" src="https://github.com/user-attachments/assets/ecf97603-fd4d-4817-a632-52fb371c8954">
 
-<img style="width:300px" src="https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0">
 
-[![Watch the video](https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0)
 
 
 Video 2:
 <img style="width:500px" src="https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0">
 <img style="width:500px" src="https://github.com/user-attachments/assets/6978769d-afce-45ec-866c-b582d76bff97">
+
+<img style="width:300px" src="https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0">
+[![Watch the video](https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0)](https://github.com/user-attachments/assets/2a76abe8-0c8b-4485-b185-610d210356f0)
+<img style="width:500px" src="https://github.com/user-attachments/assets/6978769d-afce-45ec-866c-b582d76bff97">
+[![Watch the video](https://github.com/user-attachments/assets/6978769d-afce-45ec-866c-b582d76bff97)](https://github.com/user-attachments/assets/6978769d-afce-45ec-866c-b582d76bff97)
 
 # Part 4
 
